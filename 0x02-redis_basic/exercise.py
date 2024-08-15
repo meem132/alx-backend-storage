@@ -102,9 +102,13 @@ class Cache():
         return value if not fn else fn(value)
 
     def get_int(self, key):
-  
+        '''
+        Retrieves an integer value from a Redis data storage.
+        '''
         return self.get(key, int)
 
     def get_str(self, key):
+     '''Retrieves a string value from a Redis data storage.
+        '''
         value = self._redis.get(key)
         return value.decode("utf-8")
