@@ -103,7 +103,7 @@ class Cache():
 
     def get_int(self, key):
         """
-        Get int 
+        Get key int 
         """
         return self.get(key, int)
 
